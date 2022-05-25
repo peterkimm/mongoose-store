@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Show Product</title>
+	</head>
+	<body>
+		<nav>
+			<a href="/products">Back to Product Index</a>
+		</nav>
+		<h1><%=product.name %></h1>
+		Description: <%= product.description%> <br/>
+	    <img src="<%=product.img %>"> <br/>
+		Price: $<%= product.price %> <br />
+        <% if (product.qty === 0) { %>
+            <p>OUT OF STOCK</p>
+        <% } else { %>
+            Quantity: <%= product.qty %>
+            <% } %> <br/>
+        <button>BUY</button>
+	</body>
+   
+</html>
