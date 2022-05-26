@@ -19,10 +19,22 @@
                 <%=product.description; %> <br/>
                 <a href="/products/<%=product._id; %>"> <img src="<%=product.img %>"> </a> <br/>
                 Price: $<%=product.price %>
+				<form action="/products/<%= product.id %>?_method=DELETE" method="POST" style="display:inline; margin-left:16px;">
+					<input type="submit" value="DELETE" />
+				</form>
+				<a href="/products/<%=product._id %>/edit">Edit</a>
             </li>
 			<% }) %>
 		</ul>
 
 	</body>
    
+	<style>
+		nav {
+			background-color: aquamarine;
+		}
+		body {
+			background-color: bisque;
+		}
+	</style>
 </html>
